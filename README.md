@@ -1,71 +1,78 @@
-# ProtoScience NASA Experiments
+# ProtoScience: Automated Equation Discovery from Public Data
 
-**Can an AI rediscover physics from raw NASA data?**
+An open-source pipeline that takes raw time-series data (CSV/JSON) and discovers governing equations using SINDy, FFT, power-law fitting, and change-point detection. Built on [PySINDy](https://pysindy.readthedocs.io/) and standard scientific Python.
 
-We fed real NASA datasets into [ProtoScience](https://protoscience.ai) — an automated equation discovery engine — with zero domain knowledge. Here's what it found.
+**This is not a new algorithm** — it's a reproducible workflow that automates preprocessing, multi-method routing, and interpretation across many domains. All results are rediscoveries of known laws from public datasets.
 
-## Results at a Glance
+## Results
 
-| # | Dataset | Discovery | Metric |
-|---|---------|-----------|--------|
-| E062 | [Exoplanets](notebooks/e062_exoplanets_kepler.ipynb) | **Kepler's Third Law** (1619) | R²=0.998 |
-| E063 | [Fireballs](notebooks/e063_fireballs.ipynb) | Luminous efficiency + power law | τ=8.2%, α=0.72 |
-| E065 | [Sunspots](notebooks/e065_sunspots.ipynb) | **11.09-year solar cycle** + Gleissberg | FFT exact |
-| E066 | [Gravitational Waves](notebooks/e066_gravitational_waves.ipynb) | **Chirp mass formula** verified | R²=0.998 |
-| E067 | [Asteroids](notebooks/e067_asteroids_kirkwood.ipynb) | **5/5 Kirkwood gaps** + Kepler | R²=0.99995 |
-| E068 | [Mars Weather](notebooks/e068_mars_weather.ipynb) | Seasonal T cycle + CO₂ pressure | 22% variation |
+| # | Dataset | Source | Discovery | Metric |
+|---|---------|--------|-----------|--------|
+| E061 | [Turbofan engines](notebooks/e061_turbofan.ipynb) | NASA C-MAPSS | Degradation laws (Ps30²) | R²=0.38/engine |
+| E062 | [Exoplanets](notebooks/e062_exoplanets_kepler.ipynb) | NASA Archive | **Kepler's Third Law** | R²=0.998 |
+| E063 | [Fireballs](notebooks/e063_fireballs.ipynb) | NASA CNEOS | Luminous efficiency | τ=8.2% |
+| E064 | [Voyager 1](notebooks/e064_voyager.ipynb) | NASA SPDF* | Heliopause crossing | p=3.3e-20 |
+| E065 | [Sunspots](notebooks/e065_sunspots.ipynb) | SILSO | **11.09-year solar cycle** | FFT exact |
+| E066 | [Gravitational Waves](notebooks/e066_gravitational_waves.ipynb) | GWTC | **Chirp mass formula** | R²=0.998 |
+| E067 | [Asteroids](notebooks/e067_asteroids_kirkwood.ipynb) | JPL SBDB | **5/5 Kirkwood gaps** | R²=0.99995 |
+| E068 | [Mars Weather](notebooks/e068_mars_weather.ipynb) | MSL REMS | CO₂ pressure cycle | 22% variation |
+| E069 | [Hubble's Law](notebooks/e069_hubble_law.ipynb) | NED-D | **Universe expanding** | H₀=69.7 |
+| E070 | [JWST Galaxies](notebooks/e070_jwst_galaxies.ipynb) | UNCOVER DR3 | Size evolution | 1,042 at z>10 |
+| E071 | [Dark Matter](notebooks/e071_dark_matter.ipynb) | SPARC | **Flat rotation curves** | 94% flat, 57% DM |
+| E072 | [TESS Transits](notebooks/e072_tess_transits.ipynb) | NASA Archive | Transit depth law | R²=0.85 |
+| E074 | [Dark Energy](notebooks/e074_dark_energy.ipynb) | Pantheon+ | **Accelerating expansion** | Ω_Λ=0.651 |
+| E079 | [CERN Dimuon](notebooks/e079_cern_dimuon.ipynb) | CERN CMS | **Z boson + J/ψ** | M_Z=90.9 GeV |
+| E080 | [Arctic Ice](notebooks/e080_arctic_ice.ipynb) | NSIDC | Linear decline | -0.76M km²/decade |
+| E082 | [Inequality](notebooks/e082_pareto_inequality.ipynb) | World Bank | Pareto law | α=1.91 |
+| — | Bitcoin | — | **No law found** | R²=0.00 |
+
+*E064 uses realistic generated data matching published Voyager 1 characteristics.
 
 ## Quick Start
 
 ```bash
-# Clone
 git clone https://github.com/SaulVanCode/protoscience-nasa-experiments.git
 cd protoscience-nasa-experiments
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Download all NASA data (~5 MB)
-python scripts/download_data.py
-
-# Open any notebook
 jupyter notebook notebooks/
 ```
 
-Or run directly in Google Colab (no install needed):
+Or run any notebook directly in **Google Colab** (no install needed) — click the Colab badge at the top of each notebook.
 
-| Notebook | Colab Link |
-|----------|------------|
-| Exoplanets: Kepler's Laws | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SaulVanCode/protoscience-nasa-experiments/blob/main/notebooks/e062_exoplanets_kepler.ipynb) |
-| Fireballs: Impact Physics | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SaulVanCode/protoscience-nasa-experiments/blob/main/notebooks/e063_fireballs.ipynb) |
-| Sunspots: Solar Cycle | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SaulVanCode/protoscience-nasa-experiments/blob/main/notebooks/e065_sunspots.ipynb) |
-| Gravitational Waves: Chirp Mass | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SaulVanCode/protoscience-nasa-experiments/blob/main/notebooks/e066_gravitational_waves.ipynb) |
-| **Asteroids: Kirkwood Gaps** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SaulVanCode/protoscience-nasa-experiments/blob/main/notebooks/e067_asteroids_kirkwood.ipynb) |
-| Mars Weather: CO₂ Cycle | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SaulVanCode/protoscience-nasa-experiments/blob/main/notebooks/e068_mars_weather.ipynb) |
+## LLM Interpreter
 
-## Highlight: Kirkwood Gaps
+The `interpreter/` directory contains an LLM-based agent that takes discovered equations and generates plain-language explanations, physical analogies, and testable predictions. See [interpreter/README.md](interpreter/README.md) for usage.
 
-We gave the system 10,000 asteroid orbits from NASA's JPL database. Without knowing Jupiter exists, it found **5 empty zones** in the asteroid belt — exactly where Jupiter's gravitational resonances clear material out. These are the [Kirkwood gaps](https://en.wikipedia.org/wiki/Kirkwood_gap), discovered by Daniel Kirkwood in 1857.
+## Limitations
 
-The system also verified **Kepler's Third Law** with R²=0.99995 — the most precise recovery across all experiments.
+- **No methodological novelty** — this is PySINDy + FFT + fitting, well-packaged
+- **Only rediscoveries** — no new scientific insights, only recovery of known laws
+- **Favorable benchmarks** — datasets chosen because they have known compact equations
+- **No formal comparison** against PySINDy, PySR, or AI Feynman baselines
+- **No uncertainty quantification** on discovered coefficients
+- **LLM interpreter may confabulate** — its output is narrative, not verified math
 
 ## Data Sources
 
-All data comes from official NASA/public sources:
+All data from official public sources:
 
-- **Exoplanets**: [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/) (TAP API)
-- **Fireballs**: [NASA CNEOS](https://cneos.jpl.nasa.gov/fireballs/) (SSD API)
-- **Sunspots**: [SILSO/Royal Observatory of Belgium](https://www.sidc.be/SILSO/)
-- **Gravitational Waves**: [GWOSC](https://gwosc.org/) (LIGO/Virgo/KAGRA)
-- **Asteroids**: [JPL Small-Body Database](https://ssd.jpl.nasa.gov/tools/sbdb_query.html) (SSD API)
-- **Mars Weather**: [NASA Mars Science Laboratory](https://mars.nasa.gov/) (REMS API)
+- [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/) | [NASA CNEOS](https://cneos.jpl.nasa.gov/fireballs/) | [SILSO](https://www.sidc.be/SILSO/) | [GWOSC](https://gwosc.org/) | [JPL SBDB](https://ssd.jpl.nasa.gov/tools/sbdb_query.html) | [MSL REMS](https://mars.nasa.gov/) | [NED-D](https://ned.ipac.caltech.edu/Library/Distances/) | [JWST UNCOVER](https://jwst-uncover.github.io/DR3.html) | [SPARC](https://astroweb.case.edu/SPARC/) | [Pantheon+](https://github.com/PantheonPlusSH0ES/DataRelease) | [CERN Open Data](https://opendata.cern.ch/) | [NSIDC](https://nsidc.org/data/seaice_index) | [World Bank](https://data.worldbank.org/)
 
 ## How It Works
 
-ProtoScience uses **Sparse Identification of Nonlinear Dynamics (SINDy)** — a method that fits sparse differential equations to time-series data. Combined with FFT analysis, power-law fitting, and change-point detection, it can discover governing equations from raw numerical data without domain knowledge.
+The pipeline combines multiple discovery methods:
 
-Read more at [protoscience.ai](https://protoscience.ai).
+1. **SINDy** (Brunton et al., 2016) — sparse regression over candidate function libraries for differential equations
+2. **FFT** — periodic signal detection
+3. **Power-law / curve fitting** — algebraic relationships
+4. **Change-point detection** — phase transitions and regime shifts
+
+It does not advance the algorithmic state-of-the-art. The contribution is integration, automation, and reproducibility.
+
+## Paper
+
+A draft paper is in `paper/protoscience_paper.md`. Feedback welcome.
 
 ## License
 
-MIT. Data is from public NASA sources.
+MIT
