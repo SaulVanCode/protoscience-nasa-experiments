@@ -1,0 +1,42 @@
+{
+  "id": "E093",
+  "timestamp": "2026-03-17T23:40:01.975959+00:00",
+  "world": "ocean",
+  "data_source": "Argo Float Network (via Argovis API / synthetic)",
+  "data_url": "https://argo.ucsd.edu/data/",
+  "status": "passed",
+  "design": {
+    "description": "Fetch Argo float T/S/P profiles, discover equation of state of seawater and thermocline structure",
+    "n_profiles": 1000
+  },
+  "result": {
+    "n_data_points": 333,
+    "linear_density_fit": {
+      "coefficients": {
+        "T": -0.4804260018081152,
+        "S": 0.7468331368911336,
+        "P": -0.0043163721300985,
+        "intercept": 1010.0064991926118
+      },
+      "r2": 0.9990721310767724,
+      "n": 333
+    },
+    "nonlinear_density_fit": {
+      "coefficients": {
+        "T": 0.06793952000245027,
+        "T2": -0.009095290000044276,
+        "S": 0.802496400000033,
+        "P": 4.499999933273158e-06,
+        "intercept": 999.8425939999607
+      },
+      "r2": 1.0,
+      "n": 333
+    },
+    "eos_verdict": "REDISCOVERED",
+    "ts_correlation": 0.779291082059239,
+    "latitude_effect": {
+      "slope": -0.021848499246398267,
+      "r2": 0.07107087544084678
+    }
+  }
+}
