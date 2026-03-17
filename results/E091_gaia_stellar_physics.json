@@ -1,0 +1,116 @@
+{
+  "id": "E091",
+  "timestamp": "2026-03-17T23:20:16.029491+00:00",
+  "world": "gaia_stars",
+  "data_source": "ESA Gaia DR3",
+  "data_url": "https://gea.esac.esa.int/archive/",
+  "status": "passed",
+  "design": {
+    "description": "Fetch stellar parameters from ESA Gaia DR3, discover power-law relations, verify Stefan-Boltzmann and mass-luminosity laws",
+    "query": "SELECT TOP 15000\n    g.source_id,\n    g.ra, g.dec,\n    g.parallax, g.parallax_error,\n    g.parallax_over_error,\n    g.phot_g_mean_mag,\n    g.bp_rp,\n    g.teff_gspphot,\n    g.logg_gspphot,\n    ap.lum_flame,\n    ap.radius_flame,\n    ap.mass_flame,\n    ap.age_flame\nFROM gaiadr3.gaia_source AS g\n    JOIN gaiadr3.astrophysical_parameters AS ap ON g.source_id = ap.source_id\nWHERE g.parallax_over_error > 10\n    AND g.teff_gspphot IS NOT NULL\n    AND ap.lum_flame IS NOT NULL\n    AND ap.radius_flame IS NOT NULL\n    AND ap.mass_flame IS NOT NULL\n    AND g.phot_g_mean_mag < 14\n    AND g.bp_rp IS NOT NULL\n    AND ap.lum_flame > 0.01\n    AND ap.lum_flame < 100000\n    AND ap.radius_flame > 0.1\n    AND ap.radius_flame < 500\n    AND ap.mass_flame > 0.3\n    AND ap.mass_flame < 20\nORDER BY g.random_index",
+    "n_stars_requested": 15000,
+    "filters": "parallax_over_error > 10, G < 14, valid T/L/R/M"
+  },
+  "result": {
+    "n_stars_clean": 15000,
+    "power_law_discoveries": [
+      {
+        "relation": "lum_flame = 94796.0948 * teff_gspphot^-1.0850",
+        "alpha": -1.0850041731103561,
+        "C": 94796.09475722464,
+        "r2": 0.010506069080538638,
+        "n": 15000
+      },
+      {
+        "relation": "lum_flame = 1.5418 * mass_flame^3.7845",
+        "alpha": 3.7844706325968476,
+        "C": 1.5417728159828532,
+        "r2": 0.9203696430939942,
+        "n": 15000
+      },
+      {
+        "relation": "lum_flame = 1.3328 * radius_flame^1.6960",
+        "alpha": 1.6959736378714718,
+        "C": 1.3328381841474606,
+        "r2": 0.8749268981776637,
+        "n": 15000
+      },
+      {
+        "relation": "radius_flame = 13204050142.8156 * teff_gspphot^-2.5715",
+        "alpha": -2.5715174848979463,
+        "C": 13204050142.815594,
+        "r2": 0.1940094231953563,
+        "n": 15000
+      },
+      {
+        "relation": "radius_flame = 1.2379 * mass_flame^1.9368",
+        "alpha": 1.9367577841537786,
+        "C": 1.2378518981512598,
+        "r2": 0.792444860937092,
+        "n": 15000
+      },
+      {
+        "relation": "teff_gspphot = 5803.5128 * mass_flame^-0.0296",
+        "alpha": -0.02963615488021591,
+        "C": 5803.512837799528,
+        "r2": 0.00632438475808228,
+        "n": 15000
+      },
+      {
+        "relation": "abs_mag_G = 2.4277 * bp_rp^-0.6736",
+        "alpha": -0.6736379922172223,
+        "C": 2.4276501528881758,
+        "r2": 0.10847311002274529,
+        "n": 14354
+      }
+    ],
+    "stefan_boltzmann": {
+      "verdict": "REDISCOVERED",
+      "R_exp": 2.0026474274619077,
+      "T_exp": 4.064838702693927,
+      "r2": 0.9937754880557135
+    },
+    "mass_luminosity": {
+      "verdict": "REDISCOVERED",
+      "alpha": 4.123226466913721,
+      "r2": 0.9446955473497394
+    },
+    "mass_luminosity_by_bin": [
+      {
+        "range": "low-mass",
+        "m_lo": 0.3,
+        "m_hi": 0.8,
+        "relation": "L = 1.0450 * M^5.1771",
+        "alpha": 5.17714687487953,
+        "C": 1.0449783672210426,
+        "r2": 0.9078775447962263,
+        "n": 299
+      },
+      {
+        "range": "solar-type",
+        "m_lo": 0.8,
+        "m_hi": 2.0,
+        "relation": "L = 1.4060 * M^4.0374",
+        "alpha": 4.037398573298118,
+        "C": 1.405979866409932,
+        "r2": 0.9019830612282127,
+        "n": 9256
+      },
+      {
+        "range": "high-mass",
+        "m_lo": 2.0,
+        "m_hi": 20.0,
+        "relation": "L = 1.2457 * M^4.0941",
+        "alpha": 4.094120374701113,
+        "C": 1.2457167065479124,
+        "r2": 0.9762887461804304,
+        "n": 613
+      }
+    ],
+    "hr_structure": {
+      "main_sequence_frac": 0.6778666666666666,
+      "giant_frac": 0.3197333333333333
+    },
+    "n_rediscovered": 2
+  }
+}
