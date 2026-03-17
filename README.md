@@ -24,6 +24,7 @@ An open-source pipeline that takes raw time-series data (CSV/JSON) and discovers
 | E079 | [CERN Dimuon](notebooks/e079_cern_dimuon.ipynb) | CERN CMS | **Z boson + J/ψ** | M_Z=90.9 GeV |
 | E080 | [Arctic Ice](notebooks/e080_arctic_ice.ipynb) | NSIDC | Linear decline | -0.76M km²/decade |
 | E082 | [Inequality](notebooks/e082_pareto_inequality.ipynb) | World Bank | Pareto law | α=1.91 |
+| E090 | [Selection by Inferability](notebooks/e090_selection_by_inferability.py) | Simulation | **Phase transitions in discoverability** | width=0.015 |
 | — | Bitcoin | — | **No law found** | R²=0.00 |
 
 *E064 uses realistic generated data matching published Voyager 1 characteristics.
