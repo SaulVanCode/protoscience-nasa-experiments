@@ -1,0 +1,176 @@
+{
+  "id": "E094",
+  "timestamp": "2026-03-17T23:54:12.878259+00:00",
+  "world": "biology",
+  "data_source": "PanTHERIA (Ecological Archives E090-184)",
+  "data_url": "https://esapubs.org/archive/ecol/E090/184/",
+  "status": "passed",
+  "design": {
+    "description": "Fetch PanTHERIA mammal database, discover allometric scaling laws (Kleiber's Law and quarter-power scaling)",
+    "n_species": 5416
+  },
+  "result": {
+    "power_law_discoveries": [
+      {
+        "relation": "bmr_mlo2hr = 3.9042 * M^0.7016",
+        "alpha": 0.7016185365284514,
+        "C": 3.9042377886414252,
+        "r2": 0.9228311489609298,
+        "n": 573
+      },
+      {
+        "relation": "longevity_mo = 30.5908 * M^0.1983",
+        "alpha": 0.19834990766497282,
+        "C": 30.59079100913143,
+        "r2": 0.5227201855525505,
+        "n": 1000
+      },
+      {
+        "relation": "gestation_d = 19.8802 * M^0.1890",
+        "alpha": 0.18896182131617006,
+        "C": 19.8802218097104,
+        "r2": 0.45623914066456284,
+        "n": 1335
+      },
+      {
+        "relation": "litter_size = 2.8687 * M^-0.0654",
+        "alpha": -0.06541636227822217,
+        "C": 2.8686678241856542,
+        "r2": 0.0966911373138094,
+        "n": 2325
+      },
+      {
+        "relation": "neonate_mass_g = 0.1063 * M^0.8722",
+        "alpha": 0.8721746474236749,
+        "C": 0.10633700734075849,
+        "r2": 0.7873947185522951,
+        "n": 1069
+      },
+      {
+        "relation": "weaning_age_d = 19.0825 * M^0.1888",
+        "alpha": 0.18884271559833551,
+        "C": 19.082521772617167,
+        "r2": 0.3848608028748497,
+        "n": 1141
+      },
+      {
+        "relation": "home_range_km2 = 0.0000 * M^1.0609",
+        "alpha": 1.0609345553879113,
+        "C": 4.1464543369002965e-05,
+        "r2": 0.6788685571664856,
+        "n": 700
+      },
+      {
+        "relation": "pop_density_n_km2 = 7628.2650 * M^-0.7407",
+        "alpha": -0.7406708316946561,
+        "C": 7628.26503127401,
+        "r2": 0.5717770272626779,
+        "n": 947
+      }
+    ],
+    "verification": {
+      "Kleiber's Law: BMR ~ M^0.75": {
+        "verdict": "REDISCOVERED",
+        "expected_alpha": 0.75,
+        "found_alpha": 0.7016185365284514,
+        "error": 0.04838146347154859,
+        "r2": 0.9228311489609298,
+        "n": 573
+      },
+      "Longevity ~ M^0.25": {
+        "verdict": "REDISCOVERED",
+        "expected_alpha": 0.25,
+        "found_alpha": 0.19834990766497282,
+        "error": 0.05165009233502718,
+        "r2": 0.5227201855525505,
+        "n": 1000
+      },
+      "Gestation ~ M^0.25": {
+        "verdict": "REDISCOVERED",
+        "expected_alpha": 0.25,
+        "found_alpha": 0.18896182131617006,
+        "error": 0.061038178683829936,
+        "r2": 0.45623914066456284,
+        "n": 1335
+      },
+      "Litter size ~ M^(-0.25)": {
+        "verdict": "PARTIAL",
+        "expected_alpha": -0.25,
+        "found_alpha": -0.06541636227822217,
+        "error": 0.18458363772177783,
+        "r2": 0.0966911373138094,
+        "n": 2325
+      },
+      "Neonate mass ~ M^0.75": {
+        "verdict": "REDISCOVERED",
+        "expected_alpha": 0.75,
+        "found_alpha": 0.8721746474236749,
+        "error": 0.1221746474236749,
+        "r2": 0.7873947185522951,
+        "n": 1069
+      },
+      "Home range ~ M^1.0": {
+        "verdict": "REDISCOVERED",
+        "expected_alpha": 1.0,
+        "found_alpha": 1.0609345553879113,
+        "error": 0.06093455538791126,
+        "r2": 0.6788685571664856,
+        "n": 700
+      },
+      "Pop density ~ M^(-0.75)": {
+        "verdict": "REDISCOVERED",
+        "expected_alpha": -0.75,
+        "found_alpha": -0.7406708316946561,
+        "error": 0.009329168305343916,
+        "r2": 0.5717770272626779,
+        "n": 947
+      }
+    },
+    "n_rediscovered": 6,
+    "n_total": 7,
+    "quarter_power_analysis": [
+      {
+        "law": "Kleiber's Law: BMR ~ M^0.75",
+        "alpha": 0.7016185365284514,
+        "nearest_quarter": 0.75,
+        "deviation": 0.04838146347154859
+      },
+      {
+        "law": "Longevity ~ M^0.25",
+        "alpha": 0.19834990766497282,
+        "nearest_quarter": 0.25,
+        "deviation": 0.05165009233502718
+      },
+      {
+        "law": "Gestation ~ M^0.25",
+        "alpha": 0.18896182131617006,
+        "nearest_quarter": 0.25,
+        "deviation": 0.061038178683829936
+      },
+      {
+        "law": "Litter size ~ M^(-0.25)",
+        "alpha": -0.06541636227822217,
+        "nearest_quarter": 0.0,
+        "deviation": 0.06541636227822217
+      },
+      {
+        "law": "Neonate mass ~ M^0.75",
+        "alpha": 0.8721746474236749,
+        "nearest_quarter": 0.75,
+        "deviation": 0.1221746474236749
+      },
+      {
+        "law": "Home range ~ M^1.0",
+        "alpha": 1.0609345553879113,
+        "nearest_quarter": 1.0,
+        "deviation": 0.06093455538791126
+      },
+      {
+        "law": "Pop density ~ M^(-0.75)",
+        "alpha": -0.7406708316946561,
+        "nearest_quarter": -0.75,
+        "deviation": 0.009329168305343916
+      }
+    ]
+  }
+}
