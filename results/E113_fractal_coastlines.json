@@ -1,0 +1,101 @@
+{
+  "id": "E113",
+  "timestamp": "2026-03-18T03:06:48.555132+00:00",
+  "world": "fractals",
+  "data_source": "Geographic measurements + Koch snowflake (theoretical)",
+  "data_url": "https://en.wikipedia.org/wiki/Coastline_paradox",
+  "status": "partial",
+  "design": {
+    "description": "Measure fractal dimensions of 7 natural coastlines and 1 mathematical fractal (Koch snowflake)",
+    "n_coastlines": 8
+  },
+  "result": {
+    "coastline_results": {
+      "Britain": {
+        "D": 1.3274390781473202,
+        "slope": -0.32743907814732026,
+        "r2": 0.9950288618811912,
+        "n": 7,
+        "length_ratio_10x": 2.125392179072197,
+        "expected_D": 1.25,
+        "error": 0.0774390781473202,
+        "type": "island, temperate, eroded"
+      },
+      "Norway": {
+        "D": 1.908188161242605,
+        "slope": -0.9081881612426052,
+        "r2": 0.9929192238599261,
+        "n": 6,
+        "length_ratio_10x": 8.094465218101085,
+        "expected_D": 1.52,
+        "error": 0.388188161242605,
+        "type": "fjords, glacial, extremely rough"
+      },
+      "Australia": {
+        "D": 1.3447739173178799,
+        "slope": -0.34477391731787976,
+        "r2": 0.9942834150345541,
+        "n": 6,
+        "length_ratio_10x": 2.211942928502262,
+        "expected_D": 1.13,
+        "error": 0.21477391731787998,
+        "type": "continental, relatively smooth"
+      },
+      "Japan": {
+        "D": 1.7115229060663948,
+        "slope": -0.7115229060663948,
+        "r2": 0.9979403762430771,
+        "n": 6,
+        "length_ratio_10x": 5.1466295125188095,
+        "expected_D": 1.4,
+        "error": 0.3115229060663949,
+        "type": "archipelago, volcanic, complex"
+      },
+      "South Africa": {
+        "D": 1.1600465096652348,
+        "slope": -0.1600465096652347,
+        "r2": 0.9924965982544702,
+        "n": 6,
+        "length_ratio_10x": 1.4455945747384547,
+        "expected_D": 1.08,
+        "error": 0.08004650966523474,
+        "type": "continental, smooth coastline"
+      },
+      "Chile": {
+        "D": 1.735962249519087,
+        "slope": -0.735962249519087,
+        "r2": 0.9982648117826909,
+        "n": 6,
+        "length_ratio_10x": 5.444553247171122,
+        "expected_D": 1.4,
+        "error": 0.33596224951908704,
+        "type": "fjords in south, smooth in north"
+      },
+      "Italy": {
+        "D": 1.350228169356392,
+        "slope": -0.3502281693563919,
+        "r2": 0.9932297887958176,
+        "n": 6,
+        "length_ratio_10x": 2.239897625468348,
+        "expected_D": 1.18,
+        "error": 0.17022816935639207,
+        "type": "peninsula, moderate complexity"
+      },
+      "Koch Snowflake": {
+        "D": 1.2617863068111885,
+        "slope": -0.2617863068111886,
+        "r2": 0.9999994784954314,
+        "n": 7,
+        "length_ratio_10x": 1.8272009266352136,
+        "expected_D": 1.2619,
+        "error": 0.00011369318881149226,
+        "type": "mathematical fractal (exact)"
+      }
+    },
+    "mean_D_natural": 1.5054515701878448,
+    "mean_r2": 0.9948804394073896,
+    "koch_D": 1.2617863068111885,
+    "koch_theoretical": 1.2618595071429148,
+    "verdict": "PARTIAL"
+  }
+}
