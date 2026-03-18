@@ -1,0 +1,148 @@
+{
+  "id": "E098",
+  "timestamp": "2026-03-18T00:45:03.656611+00:00",
+  "world": "social_geography",
+  "data_source": "World Bank Open Data API",
+  "data_url": "https://data.worldbank.org/",
+  "status": "passed",
+  "design": {
+    "description": "Search for mathematical relationships between geography, climate, economics, and human behavior across 200+ countries",
+    "n_countries": 261,
+    "n_with_latitude": 119,
+    "indicators": [
+      "gdp_per_capita",
+      "life_expectancy",
+      "population",
+      "co2_per_capita",
+      "education_pct_gdp",
+      "health_pct_gdp",
+      "fertility_rate",
+      "suicide_rate",
+      "arable_land_pct",
+      "pop_density"
+    ]
+  },
+  "result": {
+    "n_tests": 13,
+    "n_significant": 3,
+    "all_results": [
+      {
+        "test": "Fertility vs Life Expectancy",
+        "method": "linear",
+        "slope": -5.166090385642402,
+        "intercept": 85.44447054174617,
+        "r2": 0.6614754445894121,
+        "n": 261
+      },
+      {
+        "test": "GDP vs Fertility",
+        "method": "power_law",
+        "alpha": -0.2520318059481581,
+        "C": 21.037374189091533,
+        "r2": 0.5933134273634746,
+        "n": 255
+      },
+      {
+        "test": "GDP vs Life Expectancy",
+        "method": "power_law",
+        "alpha": 0.06385211548167101,
+        "C": 40.75190356239938,
+        "r2": 0.49228598053463146,
+        "n": 255
+      },
+      {
+        "test": "Latitude vs Life Expectancy",
+        "method": "linear",
+        "slope": 0.2030634946065669,
+        "intercept": 68.18689865870384,
+        "r2": 0.27001555876037,
+        "n": 118
+      },
+      {
+        "test": "Temperature vs Life Expectancy",
+        "method": "linear",
+        "slope": -0.4498727375896262,
+        "intercept": 79.81232204032847,
+        "r2": 0.25477454958641743,
+        "n": 107
+      },
+      {
+        "test": "Latitude vs Suicide Rate",
+        "method": "linear",
+        "slope": 0.16312463786268544,
+        "intercept": 3.944571696612534,
+        "r2": 0.2285150313410873,
+        "n": 118
+      },
+      {
+        "test": "Latitude vs GDP",
+        "method": "linear",
+        "slope": 725.0571706496121,
+        "intercept": -1534.0294955920963,
+        "r2": 0.2153662172190678,
+        "n": 118
+      },
+      {
+        "test": "Temperature vs Fertility",
+        "method": "linear",
+        "slope": 0.07278440958529146,
+        "intercept": 1.3753895309284843,
+        "r2": 0.20507702529824956,
+        "n": 107
+      },
+      {
+        "test": "Temperature vs GDP",
+        "method": "linear",
+        "slope": -1241.989783202153,
+        "intercept": 34300.80093813751,
+        "r2": 0.1457297137169914,
+        "n": 107
+      },
+      {
+        "test": "Health Spending vs Life Expectancy",
+        "method": "linear",
+        "slope": 0.510423030777583,
+        "intercept": 68.7424125574067,
+        "r2": 0.0466441177832988,
+        "n": 237
+      },
+      {
+        "test": "GDP vs Suicide Rate",
+        "method": "power_law",
+        "alpha": 0.11272221605185492,
+        "C": 2.465559922805486,
+        "r2": 0.036875980165019695,
+        "n": 225
+      },
+      {
+        "test": "Population Density vs GDP",
+        "method": "power_law",
+        "alpha": 0.14521572077460143,
+        "C": 4196.940557001539,
+        "r2": 0.022191628703887245,
+        "n": 254
+      },
+      {
+        "test": "Education vs Life Expectancy",
+        "method": "linear",
+        "slope": 0.5379548413281965,
+        "intercept": 70.54736108079244,
+        "r2": 0.018011692871707563,
+        "n": 221
+      }
+    ],
+    "preston_curve": {
+      "r2": 0.6444507006945281,
+      "verdict": "REDISCOVERED"
+    },
+    "best_result": {
+      "test": "Fertility vs Life Expectancy",
+      "method": "linear",
+      "slope": -5.166090385642402,
+      "intercept": 85.44447054174617,
+      "r2": 0.6614754445894121,
+      "n": 261
+    },
+    "key_finding": "Best social law R\u00b2=0.661 vs Kepler R\u00b2=0.998"
+  }
+}
