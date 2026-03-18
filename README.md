@@ -25,6 +25,7 @@ An open-source pipeline that takes raw time-series data (CSV/JSON) and discovers
 | E080 | [Arctic Ice](notebooks/e080_arctic_ice.ipynb) | NSIDC | Linear decline | -0.76M km²/decade |
 | E082 | [Inequality](notebooks/e082_pareto_inequality.ipynb) | World Bank | Pareto law | α=1.91 |
 | E090 | [Selection by Inferability](notebooks/e090_selection_by_inferability.py) | Simulation | **Phase transitions in discoverability** | width=0.015 |
+| E091 | [Riemann Gap Repulsion](notebooks/e091_riemann_gap_repulsion.py) | mpmath | **Level repulsion r=-0.354** | 22K zeros |
 | — | Bitcoin | — | **No law found** | R²=0.00 |
 
 *E064 uses realistic generated data matching published Voyager 1 characteristics.
