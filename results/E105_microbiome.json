@@ -1,0 +1,49 @@
+{
+  "id": "E105",
+  "timestamp": "2026-03-18T01:59:04.846841+00:00",
+  "world": "microbiome",
+  "data_source": "Published meta-analyses (HMP, American Gut, MetaHIT)",
+  "status": "exploratory",
+  "design": {
+    "description": "Search for mathematical patterns in human gut microbiome composition, diversity, and disease associations",
+    "caveat": "Uses aggregated published statistics, not raw sequencing data. All findings are candidate hypotheses."
+  },
+  "result": {
+    "zipf_bacteria": {
+      "alpha": 1.6579815589314024,
+      "r2": 0.8827723054165458,
+      "n": 25
+    },
+    "fb_bmi_power_law": {
+      "alpha": 2.275010094204384,
+      "r2": 0.9403039529188001
+    },
+    "diversity_bmi": {
+      "slope": 0.051907396622015226,
+      "intercept": 1.6650626092020961,
+      "r2": 0.08166366679500581,
+      "n": 15
+    },
+    "diversity_lifecycle": {
+      "growth": {
+        "slope": 1.4827171144564402,
+        "intercept": 1.9364280658645576,
+        "r2": 0.9353403021917399,
+        "n": 9
+      },
+      "decline": {
+        "slope": -0.032333333333333394,
+        "intercept": 5.407777777777784,
+        "r2": 0.9212467362924283,
+        "n": 9
+      },
+      "peak_age": 25.0
+    },
+    "findings": [
+      "Zipf alpha=1.66, R2=0.883",
+      "F/B ~ BMI^2.28, R2=0.940",
+      "Growth: Shannon ~ log(age), R2=0.935",
+      "Decline: 0.032/yr after 50, R2=0.921"
+    ]
+  }
+}
