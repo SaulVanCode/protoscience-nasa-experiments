@@ -1,0 +1,47 @@
+{
+  "id": "E114",
+  "timestamp": "2026-03-18T03:15:21.808253+00:00",
+  "world": "universality",
+  "data_source": "Gutenberg (Quijote) + INEGI (cities) + NOAA/Cornell (whales)",
+  "status": "passed",
+  "design": {
+    "description": "Test Zipf's law universality across 3 completely different domains: Spanish literature, Mexican urbanization, and whale communication"
+  },
+  "result": {
+    "systems": {
+      "quijote": {
+        "name": "Don Quijote",
+        "alpha": 1.2143465234244044,
+        "C": 144006.1246362881,
+        "r2": 0.9777967705819244,
+        "n": 23015,
+        "max_value": 20769.0,
+        "min_value": 1.0,
+        "ratio_1_2": 1.1281368821292777
+      },
+      "cities": {
+        "name": "Mexican cities",
+        "alpha": 1.079261797010849,
+        "C": 15950893.272132365,
+        "r2": 0.9745749156575509,
+        "n": 40,
+        "max_value": 21804000.0,
+        "min_value": 195000.0,
+        "ratio_1_2": 4.138952164009112
+      },
+      "whales": {
+        "name": "Whale calls",
+        "alpha": 1.8665695716132022,
+        "C": 14839.363280845511,
+        "r2": 0.7942631860667316,
+        "n": 28,
+        "max_value": 2847.0,
+        "min_value": 3.0,
+        "ratio_1_2": 1.3537803138373752
+      }
+    },
+    "mean_alpha": 1.3867259640161518,
+    "std_alpha": 0.34375319309195307,
+    "universality": "MODERATE"
+  }
+}
