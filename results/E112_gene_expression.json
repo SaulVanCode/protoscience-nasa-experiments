@@ -1,0 +1,52 @@
+{
+  "id": "E112",
+  "timestamp": "2026-03-18T03:01:23.213397+00:00",
+  "world": "genomics",
+  "data_source": "GTEx v8 (curated summary)",
+  "data_url": "https://gtexportal.org/",
+  "status": "passed",
+  "design": {
+    "description": "Test Zipf's law and distribution patterns in human gene expression across 6 tissues",
+    "n_genes": 40,
+    "n_tissues": 6
+  },
+  "result": {
+    "tissue_zipf": {
+      "Blood": {
+        "alpha": 4.049452327342992,
+        "r2": 0.9108507424507115,
+        "n": 40
+      },
+      "Brain": {
+        "alpha": 3.4187534889390716,
+        "r2": 0.8415799824389778,
+        "n": 40
+      },
+      "Liver": {
+        "alpha": 3.637619336809792,
+        "r2": 0.9135600941507609,
+        "n": 40
+      },
+      "Heart": {
+        "alpha": 3.6766690804660533,
+        "r2": 0.8667076477852771,
+        "n": 40
+      },
+      "Lung": {
+        "alpha": 3.523120553693468,
+        "r2": 0.8951554699415125,
+        "n": 40
+      },
+      "Muscle": {
+        "alpha": 3.9777383546692695,
+        "r2": 0.8903345902267059,
+        "n": 40
+      }
+    },
+    "mean_alpha": 3.7138921903201076,
+    "mean_r2": 0.8863647544989909,
+    "hemoglobin_dominance_pct": 90.70072438010958,
+    "mean_tau": 0.6356582668973665,
+    "verdict": "REDISCOVERED"
+  }
+}
