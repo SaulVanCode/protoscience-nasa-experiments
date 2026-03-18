@@ -1,0 +1,92 @@
+{
+  "id": "E096",
+  "timestamp": "2026-03-18T00:09:58.972126+00:00",
+  "world": "meta",
+  "data_source": "ProtoScience experiment results",
+  "status": "passed",
+  "design": {
+    "description": "Feed ProtoScience's own discovered laws back as data. Find patterns across domains, data types, and exponents.",
+    "n_laws": 24,
+    "n_domains": 9
+  },
+  "result": {
+    "r2_vs_log_n": {
+      "slope": 0.022513083007058992,
+      "r": 0.13984944283002373,
+      "r2": 0.01955786665986803
+    },
+    "domain_hierarchy": {
+      "oceanography": {
+        "mean_r2": 1.0,
+        "n_laws": 1,
+        "std": 0.0
+      },
+      "gr": {
+        "mean_r2": 0.9996666666666667,
+        "n_laws": 6,
+        "std": 0.0007453559924999305
+      },
+      "particle": {
+        "mean_r2": 0.99,
+        "n_laws": 1,
+        "std": 0.0
+      },
+      "astrophysics": {
+        "mean_r2": 0.9706666666666668,
+        "n_laws": 6,
+        "std": 0.040400770069668496
+      },
+      "physics": {
+        "mean_r2": 0.954,
+        "n_laws": 1,
+        "std": 0.0
+      },
+      "cosmology": {
+        "mean_r2": 0.9303333333333335,
+        "n_laws": 3,
+        "std": 0.08513649171901681
+      },
+      "geophysics": {
+        "mean_r2": 0.915,
+        "n_laws": 1,
+        "std": 0.0
+      },
+      "biology": {
+        "mean_r2": 0.792,
+        "n_laws": 4,
+        "std": 0.1725789674323033
+      },
+      "engineering": {
+        "mean_r2": 0.38,
+        "n_laws": 1,
+        "std": 0.0
+      }
+    },
+    "simulated_vs_real": {
+      "sim_mean": 1.0,
+      "real_mean": 0.8957894736842105,
+      "gap": 0.10421052631578953
+    },
+    "exponent_clustering": {
+      "mean_distance_to_simple": 0.03740000000000003,
+      "random_expected": 0.125,
+      "ratio": 0.29920000000000024,
+      "quarter_power_distance": 0.03740000000000003
+    },
+    "year_correlation": {
+      "r": -0.28363054486180644,
+      "slope": -0.00043485916424328353
+    },
+    "complexity_correlation": {
+      "r": 0.17496068750610394
+    },
+    "findings": [
+      "Domain hierarchy: oceanography > gr > particle > astrophysics > physics > cosmology > geophysics > biology > engineering",
+      "Simulated data gives R\u00b2 0.104 higher than real data",
+      "Sample size vs R\u00b2 correlation: r = 0.140 (weak)",
+      "Exponents cluster at 0.30x random rate near simple fractions",
+      "Year of discovery vs R\u00b2: r = -0.284 (no strong trend)",
+      "Number of variables vs R\u00b2: r = 0.175"
+    ]
+  }
+}
