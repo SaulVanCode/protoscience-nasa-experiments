@@ -1,0 +1,52 @@
+{
+  "id": "E109",
+  "timestamp": "2026-03-18T02:40:30.952793+00:00",
+  "world": "lunar",
+  "data_source": "IAU/NASA Lunar Crater Database + LRO + Chandrayaan",
+  "data_url": "https://www.lpi.usra.edu/lunar/",
+  "status": "passed",
+  "design": {
+    "description": "Analyze lunar crater depth-diameter and size-frequency scaling laws",
+    "n_craters": 48,
+    "agencies": [
+      "NASA",
+      "ISRO",
+      "IAU"
+    ]
+  },
+  "result": {
+    "depth_diameter_all": {
+      "alpha": 0.4825007116911875,
+      "C": 0.30431587948740224,
+      "r2": 0.8022649847430663,
+      "n": 48
+    },
+    "depth_diameter_by_type": {
+      "simple": {
+        "alpha": 0.8258634318722459,
+        "C": 0.2017800729353809,
+        "r2": 0.9727720411281152,
+        "n": 22
+      },
+      "complex": {
+        "alpha": 0.14132452435519988,
+        "C": 1.6254039267806522,
+        "r2": 0.06960242019850027,
+        "n": 19
+      },
+      "basin": {
+        "alpha": 0.3360717940354798,
+        "C": 0.5345908866526451,
+        "r2": 0.5321054687403821,
+        "n": 7
+      }
+    },
+    "size_frequency": {
+      "alpha": -2.068114678167429,
+      "r2": 0.9969942488613598
+    },
+    "simple_depth_ratio": 0.16106372389246199,
+    "complex_depth_ratio": 0.030489651281498602,
+    "sf_verdict": "REDISCOVERED"
+  }
+}
