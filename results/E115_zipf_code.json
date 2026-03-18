@@ -1,0 +1,56 @@
+{
+  "id": "E115",
+  "timestamp": "2026-03-18T03:22:55.585193+00:00",
+  "world": "code_analysis",
+  "data_source": "Linux kernel, CPython, AI-generated samples",
+  "status": "passed",
+  "design": {
+    "description": "Compare Zipf's law in human-written vs AI-generated source code using identifier frequency analysis"
+  },
+  "result": {
+    "samples": {
+      "Linux Kernel (C, human)": {
+        "zipf": {
+          "name": "Linux Kernel (C, human)",
+          "alpha": 0.7430860722117808,
+          "C": 28.031633367022998,
+          "r2": 0.9356785860074676,
+          "n_unique": 122,
+          "n_total": 287,
+          "hapax_ratio": 0.6065573770491803
+        },
+        "ttr": 0.4250871080139373,
+        "total": 287,
+        "unique": 122
+      },
+      "CPython (Python, human)": {
+        "zipf": {
+          "name": "CPython (Python, human)",
+          "alpha": 0.7835302743550975,
+          "C": 35.17523949581946,
+          "r2": 0.9080723058587417,
+          "n_unique": 92,
+          "n_total": 274,
+          "hapax_ratio": 0.3695652173913043
+        },
+        "ttr": 0.3357664233576642,
+        "total": 274,
+        "unique": 92
+      },
+      "AI-generated (Python)": {
+        "zipf": {
+          "name": "AI-generated (Python)",
+          "alpha": 0.8701604055176563,
+          "C": 32.775055896726336,
+          "r2": 0.9478168346547277,
+          "n_unique": 55,
+          "n_total": 189,
+          "hapax_ratio": 0.3090909090909091
+        },
+        "ttr": 0.291005291005291,
+        "total": 189,
+        "unique": 55
+      }
+    }
+  }
+}
