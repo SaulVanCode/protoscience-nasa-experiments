@@ -6,7 +6,7 @@ measure gap-gap correlations. Result: consecutive gaps are anti-correlated
 (r = -0.354), confirming GUE-predicted level repulsion empirically.
 
 Key findings:
-- Gap(n) vs Gap(n+1) correlation: r = -0.354 (stable from 10K to 22K)
+- Gap(n) vs Gap(n+1) correlation: r = -0.354 (invariant from 10K to 22K to 100K)
 - Small gaps (< 0.1) are followed by gaps 40.9x larger on average
 - Large gaps (> 2.5) are followed by gaps 0.3x smaller
 - The repulsion decays exponentially: r = -0.354, -0.077, -0.037, -0.015, ~0
@@ -53,12 +53,20 @@ RESULTS = {
         {"rank": 5, "n": 16767, "gamma": 15471.55, "norm_gap": 0.1041, "next_ratio": 19.2},
     ],
 
+    "high_altitude_check": {
+        "description": "1,000 gaps computed at n=99500-100500 (gamma ~ 74,600-75,250)",
+        "r_lag1": -0.356,
+        "min_norm_gap": 0.1346,
+        "mean_norm_gap": 1.196,
+        "conclusion": "r invariant across heights: -0.354 (n<22K) vs -0.356 (n~100K)",
+    },
+
     "scaling": {
-        "1K_to_10K_to_22K": {
+        "1K_to_10K_to_22K_to_100K": {
             "lehmer_candidates": "39 -> 192 -> 346 (density: 3.9% -> 1.9% -> 1.6%)",
             "near_degenerate": "0 -> 8 -> 27 (super-linear growth)",
             "ks_vs_gue": "0.314 -> 0.234 -> 0.214 (converging)",
-            "gap_correlation": "-0.355 -> -0.355 -> -0.354 (invariant)",
+            "gap_correlation": "-0.355 -> -0.355 -> -0.354 -> -0.356 (invariant)",
         },
     },
 
@@ -126,8 +134,10 @@ def print_results():
 
   This is consistent with Random Matrix Theory (GUE), which predicts
   eigenvalue repulsion in the same universality class. The correlation
-  coefficient r = -0.354 is measured as an empirical invariant: it does
-  not change from 10K to 22K zeros.
+  coefficient r ~ -0.355 is measured as an empirical invariant: it does
+  not change from 10K to 22K zeros, and holds at n=100K (r = -0.356,
+  gamma ~ 75,000). The statistical structure is the same at all tested
+  heights on the critical line.
 
   All claims are empirical measurements on computed zeros, not proofs.
 """)
