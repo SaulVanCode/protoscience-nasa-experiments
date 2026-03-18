@@ -1,0 +1,14 @@
+{
+  "id": "E116",
+  "timestamp": "2026-03-18T03:28:57.317159+00:00",
+  "world": "meta",
+  "data_source": "ProtoScience experiments E061-E115",
+  "status": "partial",
+  "result": {
+    "n_values": 148,
+    "benford_correlation": 0.47205607891056006,
+    "mad": 0.05867043531848351,
+    "chi2": 167.624199181217,
+    "verdict": "SUSPICIOUS"
+  }
+}
