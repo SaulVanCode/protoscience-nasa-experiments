@@ -1,0 +1,81 @@
+{
+  "id": "E111",
+  "timestamp": "2026-03-18T02:51:31.708468+00:00",
+  "world": "linguistics",
+  "data_source": "Project Gutenberg (public domain texts)",
+  "data_url": "https://www.gutenberg.org/",
+  "status": "passed",
+  "design": {
+    "description": "Test Zipf's law on word frequencies across 6 languages from different language families",
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese"
+    ],
+    "texts": {
+      "English": "Pride and Prejudice (Austen)",
+      "Spanish": "Don Quijote (Cervantes)",
+      "French": "Les Miserables (Hugo)",
+      "German": "Die Verwandlung (Kafka)",
+      "Italian": "Divina Commedia (Dante)",
+      "Portuguese": "Os Lusiadas (Camoes)"
+    }
+  },
+  "result": {
+    "language_results": {
+      "English": {
+        "title": "Pride and Prejudice (Austen)",
+        "total_words": 128715,
+        "unique_words": 6752,
+        "type_token_ratio": 0.052456978596123215,
+        "zipf_alpha": 1.3456680186070484,
+        "zipf_r2": 0.9783760904958522,
+        "hapax_ratio": 0.38640402843601895
+      },
+      "French": {
+        "title": "Les Miserables (Hugo)",
+        "total_words": 125972,
+        "unique_words": 7933,
+        "type_token_ratio": 0.06297431175181786,
+        "zipf_alpha": 1.25523051341219,
+        "zipf_r2": 0.9795466056383954,
+        "hapax_ratio": 0.46501953863607715
+      },
+      "German": {
+        "title": "Die Verwandlung (Kafka)",
+        "total_words": 84476,
+        "unique_words": 12207,
+        "type_token_ratio": 0.14450258061461244,
+        "zipf_alpha": 0.998196616373223,
+        "zipf_r2": 0.9608138547446037,
+        "hapax_ratio": 0.578766281641681
+      },
+      "Italian": {
+        "title": "Divina Commedia (Dante)",
+        "total_words": 102157,
+        "unique_words": 12959,
+        "type_token_ratio": 0.1268537643039635,
+        "zipf_alpha": 1.0259842387338214,
+        "zipf_r2": 0.9629842264179719,
+        "hapax_ratio": 0.5712632147542248
+      },
+      "Portuguese": {
+        "title": "Os Lusiadas (Camoes)",
+        "total_words": 67469,
+        "unique_words": 8921,
+        "type_token_ratio": 0.13222368791593175,
+        "zipf_alpha": 1.0277251752027015,
+        "zipf_r2": 0.9696899914216305,
+        "hapax_ratio": 0.5369353211523372
+      }
+    },
+    "mean_alpha": 1.1305609124657967,
+    "std_alpha": 0.14201785306078074,
+    "mean_r2": 0.9702821537436908,
+    "verdict": "REDISCOVERED",
+    "key_finding": "Zipf alpha = 1.131 +/- 0.142 across 5 languages"
+  }
+}
