@@ -1,0 +1,91 @@
+{
+  "id": "E108",
+  "timestamp": "2026-03-18T02:32:02.799442+00:00",
+  "world": "chaos",
+  "data_source": "Simulated Lorenz system (Lorenz 1963)",
+  "status": "passed",
+  "design": {
+    "description": "Recover the Lorenz differential equations from a chaotic trajectory using sparse regression (SINDy)",
+    "true_params": {
+      "sigma": 10.0,
+      "rho": 28.0,
+      "beta": 2.6666666666666665
+    },
+    "n_timesteps": 50000
+  },
+  "result": {
+    "clean_fit": {
+      "dx/dt": {
+        "equation": "-9.9998*x +9.9998*y",
+        "r2": 0.9999999906506793,
+        "n_terms": 2
+      },
+      "dy/dt": {
+        "equation": "+27.9981*x -0.9996*y -0.9999*xz",
+        "r2": 0.9999999976914605,
+        "n_terms": 3
+      },
+      "dz/dt": {
+        "equation": "-2.6666*z +1.0000*xy",
+        "r2": 0.9999999961832786,
+        "n_terms": 2
+      }
+    },
+    "coefficient_checks": {
+      "sigma": {
+        "true": 10.0,
+        "found_from_x": 9.999763278976491,
+        "found_from_y": 9.999765176000864,
+        "error_pct": 0.002357725113224518,
+        "match": true
+      },
+      "rho": {
+        "true": 28.0,
+        "found": 27.998080294810535,
+        "error_pct": 0.006856089962375174,
+        "match": true
+      },
+      "dy_y_coeff": {
+        "true": -1.0,
+        "found": -0.9996366524563567,
+        "match": true
+      },
+      "beta": {
+        "true": 2.6666666666666665,
+        "found": 2.6665870152132127,
+        "error_pct": 0.0029869295045170663,
+        "match": true
+      },
+      "dz_xy_coeff": {
+        "true": 1.0,
+        "found": 0.9999702456094605,
+        "match": true
+      }
+    },
+    "noise_robustness": {
+      "1%": {
+        "mean_r2": 0.4991578735829249,
+        "n_params_matched": 5,
+        "total_params": 5
+      },
+      "5%": {
+        "mean_r2": 0.041076941187263315,
+        "n_params_matched": 3,
+        "total_params": 5
+      },
+      "10%": {
+        "mean_r2": 0.010388481792153422,
+        "n_params_matched": 2,
+        "total_params": 5
+      },
+      "20%": {
+        "mean_r2": 0.0023969509386944456,
+        "n_params_matched": 1,
+        "total_params": 5
+      }
+    },
+    "butterfly_divergence_time": 14.025,
+    "verdict": "REDISCOVERED",
+    "n_matched": 5
+  }
+}
