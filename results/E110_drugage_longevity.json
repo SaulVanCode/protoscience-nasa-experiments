@@ -1,0 +1,127 @@
+{
+  "id": "E110",
+  "timestamp": "2026-03-18T02:45:09.892560+00:00",
+  "world": "aging",
+  "data_source": "DrugAge Database (Barardo et al. 2017)",
+  "data_url": "https://genomics.senescence.info/drugs/",
+  "status": "passed",
+  "design": {
+    "description": "Analyze drug-induced longevity across species from DrugAge database. Search for scaling laws connecting body mass, drug dosage, and lifespan extension.",
+    "n_experiments": 3423,
+    "n_valid": 3372
+  },
+  "result": {
+    "n_extends": 2363,
+    "n_shortens": 879,
+    "mean_extension": 8.890619810201661,
+    "median_extension": 7.1,
+    "max_extension": 267.9,
+    "species_max": {
+      "Drosophila mojavensis": 145.62,
+      "Drosophila melanogaster": 193.83,
+      "Caenorhabditis elegans": 75.0,
+      "Rattus norvegicus": 90.0,
+      "Mus musculus": 41.0,
+      "Asplanchna brightwelli": 34.0,
+      "Zaprionus paravittiger": 80.0,
+      "Aedes aegypti": 64.79,
+      "Philodina acuticornis": 267.9,
+      "Drosophila bipectinata": 26.1,
+      "Paramecium tetraurelia": 49.51,
+      "Saccharomyces cerevisiae": 260.0,
+      "Podospora anserina": 50.0,
+      "Anastrepha ludens": 43.0,
+      "Nothobranchius guentheri": 42.9,
+      "Brachionus manjavacas": 51.0,
+      "Aeolosoma viride": 157.3,
+      "Acheta domesticus": 134.0,
+      "Drosophila virilis": 32.4,
+      "Drosophila kikkawai": 16.0,
+      "Caenorhabditis briggsae": 12.0,
+      "Caenorhabditis tropicalis": 11.55,
+      "Aedes albopictus": 23.26
+    },
+    "mass_scaling": {
+      "alpha": -0.044167512289641324,
+      "C": 87.17686917542686,
+      "r2": 0.16432337385863838,
+      "n": 8
+    },
+    "top_compounds": [
+      [
+        "Indolepropionamide",
+        {
+          "change": 267.9,
+          "species": "Philodina acuticornis"
+        }
+      ],
+      [
+        "L-Carnitine",
+        {
+          "change": 260.0,
+          "species": "Saccharomyces cerevisiae"
+        }
+      ],
+      [
+        "Spermidine",
+        {
+          "change": 233.0,
+          "species": "Saccharomyces cerevisiae"
+        }
+      ],
+      [
+        "Tinospora cordifolia extract",
+        {
+          "change": 193.83,
+          "species": "Drosophila melanogaster"
+        }
+      ],
+      [
+        "Bis(1-hydroxy-2,2,6,6-tetramethyl-4-piperidinyl)-decandioate",
+        {
+          "change": 157.3,
+          "species": "Aeolosoma viride"
+        }
+      ],
+      [
+        "Ethanol",
+        {
+          "change": 145.62,
+          "species": "Drosophila mojavensis"
+        }
+      ],
+      [
+        "Aspirin",
+        {
+          "change": 134.0,
+          "species": "Acheta domesticus"
+        }
+      ],
+      [
+        "Lithocholic acid",
+        {
+          "change": 105.5,
+          "species": "Saccharomyces cerevisiae"
+        }
+      ],
+      [
+        "SkQ1",
+        {
+          "change": 100.0,
+          "species": "Ceriodaphnia affinis"
+        }
+      ],
+      [
+        "C60 fullerene",
+        {
+          "change": 90.0,
+          "species": "Rattus norvegicus"
+        }
+      ]
+    ],
+    "findings": [
+      "2363 life-extending, 879 life-shortening compounds",
+      "Max extension: +268% in Philodina acuticornis"
+    ]
+  }
+}
