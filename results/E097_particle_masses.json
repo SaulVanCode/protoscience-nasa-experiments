@@ -1,0 +1,169 @@
+{
+  "id": "E097",
+  "timestamp": "2026-03-18T00:31:05.230818+00:00",
+  "world": "particle_physics",
+  "data_source": "Particle Data Group (PDG) 2024",
+  "data_url": "https://pdg.lbl.gov/",
+  "status": "exploratory",
+  "design": {
+    "description": "Search for mathematical patterns in elementary particle masses. Verify Koide formula, test extensions to quarks, fit generation scaling.",
+    "n_particles": 9,
+    "caveat": "Only 9 data points. All patterns must be treated as exploratory."
+  },
+  "result": {
+    "koide": {
+      "leptons": {
+        "R": 0.6666605114773855,
+        "error": 6.155189281153994e-06
+      },
+      "up_quarks": {
+        "R": 0.8490064641251923,
+        "distance_from_2_3": 0.1823397974585257
+      },
+      "down_quarks": {
+        "R": 0.7314276514329372,
+        "distance_from_2_3": 0.06476098476627057
+      }
+    },
+    "mass_ratios": {
+      "charged_leptons": {
+        "masses": [
+          0.511,
+          105.658,
+          1776.86
+        ],
+        "r21": 206.76712328767124,
+        "r32": 16.817089098790436,
+        "r31": 3477.2211350293537,
+        "log_r21": 5.331593151696422,
+        "log_r32": 2.822395577664797,
+        "log_ratio": 0.5293718964221339
+      },
+      "up_quarks": {
+        "masses": [
+          2.16,
+          1270.0,
+          172760.0
+        ],
+        "r21": 587.9629629629629,
+        "r32": 136.03149606299212,
+        "r31": 79981.48148148147,
+        "log_r21": 6.376663957756564,
+        "log_r32": 4.912886447622,
+        "log_ratio": 0.770447757662684
+      },
+      "down_quarks": {
+        "masses": [
+          4.67,
+          93.4,
+          4180.0
+        ],
+        "r21": 20.0,
+        "r32": 44.75374732334047,
+        "r31": 895.0749464668095,
+        "log_r21": 2.995732273553991,
+        "log_r32": 3.8011751802840053,
+        "log_ratio": 1.268863447458366
+      }
+    },
+    "power_law_fits": {
+      "charged_leptons": {
+        "alpha": 7.451131135143227,
+        "C": 0.5345108134756513,
+        "r2": 0.999335391605639
+      },
+      "up_quarks": {
+        "alpha": 10.160260055811273,
+        "C": 1.8050692459712747,
+        "r2": 0.994336151739139
+      },
+      "down_quarks": {
+        "alpha": 5.985997311552115,
+        "C": 3.4219704001442244,
+        "r2": 0.9530724931943988
+      }
+    },
+    "exponential_fits": {
+      "charged_leptons": {
+        "beta": 4.076994364680609,
+        "C": 0.013165171517985914,
+        "r2": 0.9694006940545759,
+        "multiplier": 58.9679670247275
+      },
+      "up_quarks": {
+        "beta": 5.644775202689282,
+        "C": 0.009747893558091867,
+        "r2": 0.994427517345669,
+        "multiplier": 282.8099741548759
+      },
+      "down_quarks": {
+        "beta": 3.3984537269189983,
+        "C": 0.13648573986155585,
+        "r2": 0.995340949411019,
+        "multiplier": 29.91780316913008
+      }
+    },
+    "sqrt_mass": {
+      "charged_leptons": {
+        "slope": 20.718987292461527,
+        "intercept": -23.72241871852689,
+        "r2": 0.9118929131129898
+      },
+      "up_quarks": {
+        "slope": 207.0871923319082,
+        "intercept": -263.2574407579606,
+        "r2": 0.8114157981152377
+      },
+      "down_quarks": {
+        "slope": 31.245950611240517,
+        "intercept": -36.9991327817625,
+        "r2": 0.8386002524306667
+      }
+    },
+    "cross_family": {
+      "electron/up": {
+        "ratio": 0.23657407407407408,
+        "log_ratio": -0.6260328510162182
+      },
+      "muon/charm": {
+        "ratio": 0.08319527559055118,
+        "log_ratio": -1.0799013352863207
+      },
+      "tau/bottom": {
+        "ratio": 0.42508612440191385,
+        "log_ratio": -0.3715230709774368
+      },
+      "electron/down": {
+        "ratio": 0.1094218415417559,
+        "log_ratio": -0.9608959804313995
+      },
+      "muon/strange": {
+        "ratio": 1.1312419700214131,
+        "log_ratio": 0.053555509439542695
+      },
+      "tau/top": {
+        "ratio": 0.010285135448020375,
+        "log_ratio": -1.9877899845778626
+      }
+    },
+    "all_masses": {
+      "power_law": {
+        "alpha": 5.310977865069393,
+        "C": 0.08556660699999276,
+        "r2": 0.8710473535437455
+      },
+      "exponential": {
+        "slope": 0.6378397713004024,
+        "intercept": -0.9760302784291747,
+        "r2": 0.9656825180348572
+      }
+    },
+    "key_findings": [
+      "Koide formula confirmed for charged leptons: R = 0.6666605115 (error: 6.16e-06)",
+      "Koide for up-quarks: R = 0.849006 (deviates from 2/3)",
+      "Koide for down-quarks: R = 0.731428 (deviates from 2/3)",
+      "All families show exponential mass growth across generations",
+      "CAVEAT: n=3 per family \u2014 insufficient for statistical conclusions"
+    ]
+  }
+}
