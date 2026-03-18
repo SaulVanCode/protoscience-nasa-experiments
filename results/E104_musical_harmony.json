@@ -1,0 +1,205 @@
+{
+  "id": "E104",
+  "timestamp": "2026-03-18T01:53:28.553046+00:00",
+  "world": "music",
+  "data_source": "Music theory + psychoacoustic measurements (Plomp & Levelt 1965)",
+  "status": "passed",
+  "design": {
+    "description": "Test whether musical consonance can be predicted from frequency ratio complexity alone",
+    "n_intervals": 13
+  },
+  "result": {
+    "intervals": [
+      {
+        "name": "Unison",
+        "p": 1,
+        "q": 1,
+        "ratio": 1.0,
+        "cents": 0,
+        "consonance": 1.0,
+        "euler": 1,
+        "complexity": 2,
+        "tenney": 0.0,
+        "roughness": 0.0
+      },
+      {
+        "name": "Minor second",
+        "p": 16,
+        "q": 15,
+        "ratio": 1.0666666666666667,
+        "cents": 112,
+        "consonance": 7.0,
+        "euler": 11,
+        "complexity": 31,
+        "tenney": 7.906890595608519,
+        "roughness": 0.9963474241475718
+      },
+      {
+        "name": "Major second",
+        "p": 9,
+        "q": 8,
+        "ratio": 1.125,
+        "cents": 204,
+        "consonance": 6.0,
+        "euler": 8,
+        "complexity": 17,
+        "tenney": 6.169925001442312,
+        "roughness": 0.7210440470104283
+      },
+      {
+        "name": "Minor third",
+        "p": 6,
+        "q": 5,
+        "ratio": 1.2,
+        "cents": 316,
+        "consonance": 3.5,
+        "euler": 8,
+        "complexity": 11,
+        "tenney": 4.906890595608519,
+        "roughness": 0.33923671449359166
+      },
+      {
+        "name": "Major third",
+        "p": 5,
+        "q": 4,
+        "ratio": 1.25,
+        "cents": 386,
+        "consonance": 3.0,
+        "euler": 7,
+        "complexity": 9,
+        "tenney": 4.321928094887363,
+        "roughness": 0.18751106832624745
+      },
+      {
+        "name": "Perfect fourth",
+        "p": 4,
+        "q": 3,
+        "ratio": 1.3333333333333333,
+        "cents": 498,
+        "consonance": 2.5,
+        "euler": 5,
+        "complexity": 7,
+        "tenney": 3.584962500721156,
+        "roughness": 0.06416857417362631
+      },
+      {
+        "name": "Tritone",
+        "p": 45,
+        "q": 32,
+        "ratio": 1.40625,
+        "cents": 590,
+        "consonance": 6.5,
+        "euler": 14,
+        "complexity": 77,
+        "tenney": 10.491853096329674,
+        "roughness": 0.0
+      },
+      {
+        "name": "Perfect fifth",
+        "p": 3,
+        "q": 2,
+        "ratio": 1.5,
+        "cents": 702,
+        "consonance": 2.0,
+        "euler": 4,
+        "complexity": 5,
+        "tenney": 2.584962500721156,
+        "roughness": 0.0
+      },
+      {
+        "name": "Minor sixth",
+        "p": 8,
+        "q": 5,
+        "ratio": 1.6,
+        "cents": 814,
+        "consonance": 4.0,
+        "euler": 8,
+        "complexity": 13,
+        "tenney": 5.321928094887363,
+        "roughness": 0.0
+      },
+      {
+        "name": "Major sixth",
+        "p": 5,
+        "q": 3,
+        "ratio": 1.6666666666666667,
+        "cents": 884,
+        "consonance": 3.5,
+        "euler": 7,
+        "complexity": 8,
+        "tenney": 3.9068905956085187,
+        "roughness": 0.0
+      },
+      {
+        "name": "Minor seventh",
+        "p": 16,
+        "q": 9,
+        "ratio": 1.7777777777777777,
+        "cents": 996,
+        "consonance": 5.5,
+        "euler": 9,
+        "complexity": 25,
+        "tenney": 7.169925001442312,
+        "roughness": 0.0
+      },
+      {
+        "name": "Major seventh",
+        "p": 15,
+        "q": 8,
+        "ratio": 1.875,
+        "cents": 1088,
+        "consonance": 6.5,
+        "euler": 10,
+        "complexity": 23,
+        "tenney": 6.906890595608519,
+        "roughness": 0.0
+      },
+      {
+        "name": "Octave",
+        "p": 2,
+        "q": 1,
+        "ratio": 2.0,
+        "cents": 1200,
+        "consonance": 1.0,
+        "euler": 2,
+        "complexity": 3,
+        "tenney": 1.0,
+        "roughness": 0.0
+      }
+    ],
+    "metric_comparison": {
+      "Euler Gradus": {
+        "r": 0.9190006028661344,
+        "r2": 0.8445621080683184,
+        "slope": 0.5411266201395815,
+        "intercept": 0.0872382851445642
+      },
+      "p + q": {
+        "r": 0.7151012010632884,
+        "r2": 0.5113697277621579,
+        "slope": 0.07588982090228974,
+        "intercept": 2.6514962593516205
+      },
+      "Tenney height": {
+        "r": 0.9353993511896628,
+        "r2": 0.874971946206042,
+        "slope": 0.6880319733271478,
+        "intercept": 0.5983145281477329
+      },
+      "Roughness": {
+        "r": 0.48503686469998786,
+        "r2": 0.23526076011799435,
+        "slope": 3.164215132367854,
+        "intercept": 3.4381551876923044
+      }
+    },
+    "best_predictor": "Tenney height",
+    "best_r2": 0.874971946206042,
+    "simplicity_law": {
+      "equation": "consonance = 0.598 + 0.688 * log2(p*q)",
+      "r": 0.9353993511896628,
+      "r2": 0.874971946206042
+    },
+    "verdict": "REDISCOVERED"
+  }
+}
