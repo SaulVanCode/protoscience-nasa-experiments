@@ -1,0 +1,144 @@
+{
+  "id": "E117b",
+  "timestamp": "2026-03-18T04:33:42.375620+00:00",
+  "world": "meta",
+  "data_source": "E117 ratios, re-analyzed with stronger null models",
+  "status": "passed",
+  "design": {
+    "description": "Robustness checks for E117 scale-attractor analysis. Tests log-uniform null, log-normal null, process-matched nulls per category, KDE density analysis, log-ratio space, and effective sample size correction for within-source correlation.",
+    "n_ratios": 36,
+    "n_effective": 11.492063492063492,
+    "null_models_tested": [
+      "Uniform [1,5]",
+      "Log-uniform [1,5]",
+      "LogNormal(0,0.5)",
+      "LogNormal(0,1.0)",
+      "log-ratio uniform"
+    ],
+    "process_matched_categories": [
+      "dissipative",
+      "recursive-geometric",
+      "social",
+      "spectral"
+    ]
+  },
+  "result": {
+    "effective_sample_size": {
+      "n_total": 36,
+      "n_sources": 8,
+      "n_effective": 11.492063492063492,
+      "rho_assumed": 0.5
+    },
+    "global_null_tests": {
+      "Uniform [1,5]": {
+        "null_mean": 0.22998558375877518,
+        "obs_mean": 0.354233927869073,
+        "ratio": 1.5402440539082576,
+        "p_value": 0.94875,
+        "significant": false
+      },
+      "Log-uniform [1,5]": {
+        "null_mean": 0.17889446680968366,
+        "obs_mean": 0.354233927869073,
+        "ratio": 1.980127916677958,
+        "p_value": 0.99436,
+        "significant": false
+      },
+      "LogNormal(0,0.5)": {
+        "null_mean": 0.12569113784950142,
+        "obs_mean": 0.354233927869073,
+        "ratio": 2.8182888143889784,
+        "p_value": 0.98972,
+        "significant": false
+      },
+      "LogNormal(0,1.0)": {
+        "null_mean": 0.3736834488631645,
+        "obs_mean": 0.354233927869073,
+        "ratio": 0.9479518799848865,
+        "p_value": 0.56346,
+        "significant": false
+      }
+    },
+    "log_space_test": {
+      "obs_mean_dist": 0.11653484830080114,
+      "null_mean_dist": 0.07229484838879717,
+      "ratio": 1.6119384838333712,
+      "p_value": 0.97909,
+      "significant": false
+    },
+    "category_process_matched": {
+      "dissipative": {
+        "n": 4,
+        "null_type": "Random metric radii",
+        "obs_mean_dist": 0.6587937713251596,
+        "null_mean_dist": 0.14032138430246385,
+        "ratio": 4.694892190524036,
+        "p_value": 1.0,
+        "significant": false
+      },
+      "recursive-geometric": {
+        "n": 12,
+        "null_type": "Random exponent ratios",
+        "obs_mean_dist": 0.15964191121031743,
+        "null_mean_dist": 0.19648260505258608,
+        "ratio": 0.8124989546407495,
+        "p_value": 0.50918,
+        "significant": false
+      },
+      "social": {
+        "n": 8,
+        "null_type": "Zipf-sampled rank ratios",
+        "obs_mean_dist": 0.35627770370530026,
+        "null_mean_dist": 0.10852424512534992,
+        "ratio": 3.2829318765938895,
+        "p_value": 0.98706,
+        "significant": false
+      },
+      "spectral": {
+        "n": 12,
+        "null_type": "FFT pink-noise peaks",
+        "obs_mean_dist": 0.4459434794849814,
+        "null_mean_dist": 0.10128210679802284,
+        "ratio": 4.402983839724855,
+        "p_value": 0.99978,
+        "significant": false
+      }
+    },
+    "kde_peaks_linear": [
+      {
+        "position": 1.3206412825651301,
+        "height": 0.7832731162355598,
+        "nearest_constant": "4/3",
+        "distance": 0.012692050768203123
+      },
+      {
+        "position": 3.8056112224448895,
+        "height": 0.04753583986271677,
+        "nearest_constant": "4",
+        "distance": 0.19438877755511053
+      }
+    ],
+    "kde_peaks_log": [
+      {
+        "position": 1.2654766288075463,
+        "height": 1.3568109967587818,
+        "nearest_constant": "4/3",
+        "distance": 0.06785670452578696
+      },
+      {
+        "position": 3.586688255426045,
+        "height": 0.1404483683287614,
+        "nearest_constant": "4",
+        "distance": 0.41331174457395514
+      }
+    ],
+    "findings": [
+      "No global clustering under ANY null model (uniform, log-uniform, log-normal)",
+      "Log-ratio space: no clustering (p=0.9791)",
+      "Process-matched nulls: no category shows significant clustering",
+      "Effective sample size: 11.5/36 (32% after correlation correction)",
+      "KDE peak at 1.321 (nearest: 4/3, d=0.0127)",
+      "E117 conclusion SURVIVES robustness checks: no universal attractor, category-specific preferences are mechanism-driven not constant-driven"
+    ]
+  }
+}
