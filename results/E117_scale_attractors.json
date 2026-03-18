@@ -1,0 +1,315 @@
+{
+  "id": "E117",
+  "timestamp": "2026-03-18T04:09:48.263301+00:00",
+  "world": "meta",
+  "data_source": "ProtoScience experiments E061-E116, BH001-BH003",
+  "status": "passed",
+  "design": {
+    "description": "Test whether nature's scale ratios cluster around preferred mathematical constants (\u03c6, 2, e, simple fractions) or show no preference. Extract ratios from 51 experiments across 18 domains.",
+    "n_ratios": 36,
+    "n_exponents": 37,
+    "n_candidates": 11,
+    "n_monte_carlo": 100000
+  },
+  "result": {
+    "ratio_stats": {
+      "n": 36,
+      "mean": 2.035219377236335,
+      "median": 1.3484848484848484,
+      "std": 1.6709967937869805
+    },
+    "clustering_test": {
+      "observed_mean_distance": 0.35423392786907293,
+      "null_mean_distance": 0.2301567544102334,
+      "ratio_to_null": 1.539098553839021,
+      "p_value": 0.99814,
+      "significant": false
+    },
+    "candidate_nearest_counts": {
+      "4/3": 19,
+      "4": 4,
+      "sqrt(3)": 3,
+      "3/2": 3,
+      "2": 3,
+      "phi": 2,
+      "e": 1,
+      "pi": 1,
+      "sqrt(2)": 0,
+      "5/3": 0,
+      "3": 0
+    },
+    "phi_analysis": {
+      "mean_distance_to_phi": 0.8822546693450499,
+      "mean_distance_to_3_2": 0.8548602595949125,
+      "mean_distance_to_sqrt3": 0.9191560229661564,
+      "winner_in_1p5_1p7_range": "3/2",
+      "n_within_0p15_of_phi": 7
+    },
+    "exponent_clustering": {
+      "n_exponents": 37,
+      "mean_distance_to_simple_fraction": 0.06187027027027028,
+      "random_expected": 0.125,
+      "ratio_to_random": 0.49496216216216227,
+      "mean_distance_to_quarter": 0.04943783783783785
+    },
+    "category_results": {
+      "dissipative": {
+        "n": 4,
+        "mean": 2.7108234090736714,
+        "std": 2.172326947056985,
+        "top_attractor": "3/2",
+        "top_count": 1,
+        "mean_distance": 0.6587937713251596
+      },
+      "recursive-geometric": {
+        "n": 12,
+        "mean": 1.4597715092780765,
+        "std": 0.6762228556936233,
+        "top_attractor": "4/3",
+        "top_count": 9,
+        "mean_distance": 0.15964191121031743
+      },
+      "social": {
+        "n": 8,
+        "mean": 2.5161316484594116,
+        "std": 1.70741100837419,
+        "top_attractor": "4/3",
+        "top_count": 2,
+        "mean_distance": 0.35627770370530026
+      },
+      "spectral": {
+        "n": 12,
+        "mean": 2.06485772043343,
+        "std": 1.9402475246343427,
+        "top_attractor": "4/3",
+        "top_count": 7,
+        "mean_distance": 0.4459434794849814
+      }
+    },
+    "all_ratios": [
+      {
+        "value": 1.0006307138586583,
+        "experiment": "E094",
+        "category": "recursive-geometric",
+        "description": "Allometric \u03b1 ratio 0.189/0.189"
+      },
+      {
+        "value": 1.0496824505787052,
+        "experiment": "E094",
+        "category": "recursive-geometric",
+        "description": "Allometric \u03b1 ratio 0.198/0.189"
+      },
+      {
+        "value": 1.0556602956350498,
+        "experiment": "E094",
+        "category": "recursive-geometric",
+        "description": "Allometric \u03b1 ratio 0.741/0.702"
+      },
+      {
+        "value": 1.1142857142857143,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Vostok FFT peak 12079/10840 yr"
+      },
+      {
+        "value": 1.1282051282051282,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Vostok FFT peak 10840/9608 yr"
+      },
+      {
+        "value": 1.1500000000000001,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Vostok FFT peak 21137/18380 yr"
+      },
+      {
+        "value": 1.1547005383792515,
+        "experiment": "BH001",
+        "category": "dissipative",
+        "description": "GR r_ISCO/r_shadow"
+      },
+      {
+        "value": 1.1775469076163534,
+        "experiment": "E094",
+        "category": "recursive-geometric",
+        "description": "Allometric \u03b1 ratio 0.872/0.741"
+      },
+      {
+        "value": 1.1967031225233793,
+        "experiment": "E113",
+        "category": "recursive-geometric",
+        "description": "Coastline D / Koch D"
+      },
+      {
+        "value": 1.2,
+        "experiment": "E104",
+        "category": "recursive-geometric",
+        "description": "Musical minor third 6:5"
+      },
+      {
+        "value": 1.2164244380661786,
+        "experiment": "E094",
+        "category": "recursive-geometric",
+        "description": "Allometric \u03b1 ratio 1.061/0.872"
+      },
+      {
+        "value": 1.2173913043478262,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Vostok FFT peak 18380/15098 yr"
+      },
+      {
+        "value": 1.2311908024066243,
+        "experiment": "E101",
+        "category": "social",
+        "description": "Zipf city ratio #1/#2 India"
+      },
+      {
+        "value": 1.2499999999999998,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Vostok FFT peak 15098/12079 yr"
+      },
+      {
+        "value": 1.25,
+        "experiment": "E104",
+        "category": "recursive-geometric",
+        "description": "Musical major third 5:4"
+      },
+      {
+        "value": 1.3237396713397085,
+        "experiment": "E101",
+        "category": "social",
+        "description": "Zipf city ratio #1/#2 China"
+      },
+      {
+        "value": 1.333333333333333,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Vostok FFT peak 28183/21137 yr"
+      },
+      {
+        "value": 1.3333333333333333,
+        "experiment": "E104",
+        "category": "recursive-geometric",
+        "description": "Musical fourth 4:3"
+      },
+      {
+        "value": 1.3636363636363635,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Vostok FFT peak 38432/28183 yr"
+      },
+      {
+        "value": 1.5,
+        "experiment": "BH001",
+        "category": "dissipative",
+        "description": "GR r_photon/r_horizon"
+      },
+      {
+        "value": 1.5,
+        "experiment": "E104",
+        "category": "recursive-geometric",
+        "description": "Musical fifth 3:2"
+      },
+      {
+        "value": 1.525641996818423,
+        "experiment": "E101",
+        "category": "social",
+        "description": "Zipf city ratio #1/#2 USA"
+      },
+      {
+        "value": 1.5714285714285714,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Vostok FFT peak 60393/38432 yr"
+      },
+      {
+        "value": 1.6379105364838757,
+        "experiment": "E101",
+        "category": "social",
+        "description": "Zipf city ratio #1/#2 Brazil"
+      },
+      {
+        "value": 1.7320508075688774,
+        "experiment": "BH001",
+        "category": "dissipative",
+        "description": "GR r_shadow/r_photon"
+      },
+      {
+        "value": 1.75,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Vostok FFT peak 105687/60393 yr"
+      },
+      {
+        "value": 1.8181819472074447,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Milankovitch 38432/21137 yr"
+      },
+      {
+        "value": 1.919431279620853,
+        "experiment": "E101",
+        "category": "social",
+        "description": "Zipf city ratio #1/#2 Germany"
+      },
+      {
+        "value": 1.9393703646076448,
+        "experiment": "E101",
+        "category": "social",
+        "description": "Zipf city ratio #1/#2 Japan"
+      },
+      {
+        "value": 2.0,
+        "experiment": "E104",
+        "category": "recursive-geometric",
+        "description": "Musical octave 2:1"
+      },
+      {
+        "value": 2.7499998048487537,
+        "experiment": "E107",
+        "category": "spectral",
+        "description": "Milankovitch 105687/38432 yr"
+      },
+      {
+        "value": 3.5372768497252607,
+        "experiment": "E094",
+        "category": "recursive-geometric",
+        "description": "Allometric \u03b1 ratio 0.702/0.198"
+      },
+      {
+        "value": 4.14106463878327,
+        "experiment": "E101",
+        "category": "social",
+        "description": "Zipf city ratio #1/#2 Mexico"
+      },
+      {
+        "value": 6.4107038976148925,
+        "experiment": "E101",
+        "category": "social",
+        "description": "Zipf city ratio #1/#2 France"
+      },
+      {
+        "value": 6.456542290346556,
+        "experiment": "E092",
+        "category": "dissipative",
+        "description": "Gutenberg-Richter frequency ratio per magnitude"
+      },
+      {
+        "value": 8.331830477908026,
+        "experiment": "E065",
+        "category": "spectral",
+        "description": "Solar Gleissberg/main cycle"
+      }
+    ],
+    "findings": [
+      "Scale ratios do NOT show significant clustering around mathematical constants (p=0.9981)",
+      "\u03c6 is nearest attractor for 2/36 ratios. Winner in 1.5-1.7 range: 3/2",
+      "Power-law exponents cluster at 0.49\u00d7 random rate near simple fractions (expanded: 37 exponents)",
+      "Category attractors: dissipative: top attractor = 3/2; recursive-geometric: top attractor = 4/3; social: top attractor = 4/3; spectral: top attractor = 4/3",
+      "Each class of system may have its own preferred scale ratios \u2014 there is no single universal constant like \u03c6 that governs all systems"
+    ]
+  }
+}
