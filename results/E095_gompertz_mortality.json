@@ -1,0 +1,125 @@
+{
+  "id": "E095",
+  "timestamp": "2026-03-18T00:02:27.731854+00:00",
+  "world": "mortality",
+  "data_source": "SSA Period Life Tables + WHO GHO",
+  "data_url": "https://www.ssa.gov/oact/STATS/table4c6.html",
+  "status": "passed",
+  "design": {
+    "description": "Fit Gompertz and Gompertz-Makeham mortality laws to actuarial life tables from multiple countries",
+    "n_countries": 5,
+    "countries": [
+      "USA_Male_2020",
+      "USA_Female_2020",
+      "Japan_2019",
+      "Nigeria_2019",
+      "Sweden_2019"
+    ]
+  },
+  "result": {
+    "gompertz_fits": {
+      "USA_Male_2020": {
+        "alpha": 7.809789843462078e-05,
+        "beta": 0.0855924318111202,
+        "r2": 0.9935981520744662,
+        "doubling_years": 8.098229783791368,
+        "n": 14,
+        "age_range": [
+          30,
+          95
+        ]
+      },
+      "USA_Female_2020": {
+        "alpha": 2.801120155590822e-05,
+        "beta": 0.09542536016875314,
+        "r2": 0.9954044687893008,
+        "doubling_years": 7.263762791507022,
+        "n": 14,
+        "age_range": [
+          30,
+          95
+        ]
+      },
+      "Japan_2019": {
+        "alpha": 1.2390183282464812e-05,
+        "beta": 0.10529029802152003,
+        "r2": 0.9932437218401488,
+        "doubling_years": 6.58320086071249,
+        "n": 14,
+        "age_range": [
+          30,
+          95
+        ]
+      },
+      "Nigeria_2019": {
+        "alpha": 0.0008479554286224553,
+        "beta": 0.06725597457367485,
+        "r2": 0.99459906146573,
+        "doubling_years": 10.30610566501634,
+        "n": 13,
+        "age_range": [
+          30,
+          90
+        ]
+      },
+      "Sweden_2019": {
+        "alpha": 1.0941886527128565e-05,
+        "beta": 0.10644581361232326,
+        "r2": 0.9938435476443948,
+        "doubling_years": 6.511737352907033,
+        "n": 14,
+        "age_range": [
+          30,
+          95
+        ]
+      }
+    },
+    "makeham_fits": {
+      "USA_Male_2020": {
+        "alpha": 0.00010664396955973052,
+        "beta": 0.0808945748693093,
+        "lambda": 9.54e-05,
+        "r2": 0.9642516056943238,
+        "doubling_years": 8.568524918757182,
+        "n": 25
+      },
+      "USA_Female_2020": {
+        "alpha": 5.8997531395310565e-05,
+        "beta": 0.08433182764365213,
+        "lambda": 7.92e-05,
+        "r2": 0.8774732695826368,
+        "doubling_years": 8.21928327569123,
+        "n": 25
+      },
+      "Japan_2019": {
+        "alpha": 4.0287170350768745e-05,
+        "beta": 0.0881914067710972,
+        "lambda": 6.3e-05,
+        "r2": 0.7851767665169026,
+        "doubling_years": 7.859577320940401,
+        "n": 22
+      },
+      "Nigeria_2019": {
+        "alpha": 0.0025860241717897362,
+        "beta": 0.047187537637467934,
+        "lambda": 0.0036000000000000003,
+        "r2": 0.6507511364652427,
+        "doubling_years": 14.68920005712634,
+        "n": 20
+      },
+      "Sweden_2019": {
+        "alpha": 3.5873524777121443e-05,
+        "beta": 0.08930172041318733,
+        "lambda": 6.3e-05,
+        "r2": 0.7958096220297295,
+        "doubling_years": 7.761856964824914,
+        "n": 22
+      }
+    },
+    "mean_beta": 0.09200197563747828,
+    "mean_doubling_years": 7.752607290786851,
+    "mean_r2": 0.994137790362808,
+    "verdict": "REDISCOVERED",
+    "key_finding": "Human mortality doubles every 7.8 years after age 30"
+  }
+}
