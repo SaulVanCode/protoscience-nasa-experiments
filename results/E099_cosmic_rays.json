@@ -1,0 +1,91 @@
+{
+  "id": "E099",
+  "timestamp": "2026-03-18T01:10:57.408767+00:00",
+  "world": "cosmic_rays",
+  "data_source": "PDG Review + Pierre Auger + Telescope Array (compiled)",
+  "data_url": "https://pdg.lbl.gov/",
+  "status": "passed",
+  "design": {
+    "description": "Analyze the cosmic ray energy spectrum for power-law structure, spectral breaks (knee, ankle), and the GZK cutoff",
+    "n_points": 30,
+    "energy_range": "10^9 to 10^20.3 eV"
+  },
+  "result": {
+    "overall_fit": {
+      "gamma": 2.2729279782549896,
+      "r2": 0.9987211180262866
+    },
+    "segments": {
+      "below_knee": {
+        "gamma": 2.21818181818182,
+        "intercept": 22.436363636363662,
+        "r2": 0.9988189187738229,
+        "n": 11,
+        "E_range": [
+          10.0,
+          15.0
+        ]
+      },
+      "knee_to_ankle": {
+        "gamma": 2.3961620469083122,
+        "intercept": 25.30392324093809,
+        "r2": 0.9993345610909097,
+        "n": 6,
+        "E_range": [
+          16.0,
+          18.3
+        ]
+      },
+      "above_ankle": {
+        "gamma": 1.8382352941176432,
+        "intercept": 15.186470588235228,
+        "r2": 0.9769532813125256,
+        "n": 5,
+        "E_range": [
+          18.5,
+          19.5
+        ]
+      }
+    },
+    "knee_verdict": "REDISCOVERED",
+    "ankle_verdict": "REDISCOVERED",
+    "n_rediscovered": 2,
+    "top_breaks": [
+      {
+        "log_E": 19.3,
+        "E_eV": 1.9952623149688828e+19,
+        "slope_before": 1.551401869158873,
+        "slope_after": 3.3084112149532903,
+        "delta_gamma": 1.7570093457944174
+      },
+      {
+        "log_E": 18.3,
+        "E_eV": 1.995262314968883e+18,
+        "slope_before": 2.3999999999999853,
+        "slope_after": 1.551401869158873,
+        "delta_gamma": -0.8485981308411124
+      },
+      {
+        "log_E": 18.5,
+        "E_eV": 3.1622776601683794e+18,
+        "slope_before": 2.2959183673469425,
+        "slope_after": 1.598639455782307,
+        "delta_gamma": -0.6972789115646356
+      },
+      {
+        "log_E": 19.0,
+        "E_eV": 1e+19,
+        "slope_before": 2.018691588785056,
+        "slope_after": 2.700934579439223,
+        "delta_gamma": 0.6822429906541672
+      },
+      {
+        "log_E": 18.0,
+        "E_eV": 1e+18,
+        "slope_before": 2.4800000000000004,
+        "slope_after": 2.018691588785056,
+        "delta_gamma": -0.4613084112149446
+      }
+    ]
+  }
+}
