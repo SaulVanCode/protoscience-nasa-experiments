@@ -1,0 +1,84 @@
+{
+  "id": "E107",
+  "timestamp": "2026-03-18T02:12:18.023675+00:00",
+  "world": "paleoclimate",
+  "data_source": "Vostok Ice Core (Petit et al. 1999)",
+  "data_url": "https://www.ncei.noaa.gov/pub/data/paleo/icecore/antarctica/vostok/",
+  "status": "passed",
+  "design": {
+    "description": "Apply FFT to 420,000 years of Antarctic ice core temperature data to find Milankovitch orbital cycles",
+    "n_points": 3310,
+    "time_span_years": 422766.0
+  },
+  "result": {
+    "n_glacial_cycles": 19,
+    "top_peaks": [
+      {
+        "period": 105687.25,
+        "power": 5073629.085175231
+      },
+      {
+        "period": 38431.72727272727,
+        "power": 2512689.0388526157
+      },
+      {
+        "period": 28183.266666666666,
+        "power": 948125.8786136309
+      },
+      {
+        "period": 21137.450000000004,
+        "power": 801303.0432743687
+      },
+      {
+        "period": 18380.391304347828,
+        "power": 463845.43174216413
+      },
+      {
+        "period": 60392.71428571428,
+        "power": 253309.78098011104
+      },
+      {
+        "period": 12078.542857142858,
+        "power": 171563.8970458776
+      },
+      {
+        "period": 10839.71794871795,
+        "power": 141155.01282674554
+      },
+      {
+        "period": 15098.17857142857,
+        "power": 101999.92309240758
+      },
+      {
+        "period": 9607.931818181818,
+        "power": 64943.720072670585
+      }
+    ],
+    "milankovitch_matches": {
+      "Eccentricity": {
+        "known_period": 100000,
+        "found_period": 105687.25,
+        "power": 5073629.085175231,
+        "error_pct": 5.68725,
+        "matched": true
+      },
+      "Obliquity": {
+        "known_period": 41000,
+        "found_period": 38431.72727272727,
+        "power": 2512689.0388526157,
+        "error_pct": 6.26407982261641,
+        "matched": true
+      },
+      "Precession": {
+        "known_period": 23000,
+        "found_period": 21137.450000000004,
+        "power": 801303.0432743687,
+        "error_pct": 8.09804347826085,
+        "matched": true
+      }
+    },
+    "n_matched": 3,
+    "verdict": "REDISCOVERED",
+    "dominant_cycle_years": 105687.25
+  }
+}
