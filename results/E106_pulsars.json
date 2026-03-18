@@ -1,0 +1,29 @@
+{
+  "id": "E106",
+  "timestamp": "2026-03-18T02:05:39.631735+00:00",
+  "world": "neutron_stars",
+  "data_source": "ATNF Pulsar Catalogue (Manchester et al. 2005)",
+  "data_url": "https://www.atnf.csiro.au/research/pulsar/psrcat/",
+  "status": "passed",
+  "design": {
+    "description": "Analyze the P-Pdot diagram of pulsars, verify magnetic dipole braking model, characterize populations",
+    "n_pulsars": 44,
+    "types": {
+      "normal": 24,
+      "msp": 12,
+      "magnetar": 8
+    }
+  },
+  "result": {
+    "p_pdot_correlation": 0.840277641434298,
+    "overall_power_law": {
+      "alpha": 2.2972720214329874,
+      "r2": 0.7060665146943864
+    },
+    "population_separation": {
+      "msp_normal_gap_decades": 2.4562511096740742,
+      "normal_magnetar_gap_decades": 0.081748512820079
+    },
+    "crab_Edot_erg_s": 4.46069400106734e+38
+  }
+}
