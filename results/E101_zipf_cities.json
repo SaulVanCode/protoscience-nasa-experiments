@@ -1,0 +1,130 @@
+{
+  "id": "E101",
+  "timestamp": "2026-03-18T01:34:48.253137+00:00",
+  "world": "social",
+  "data_source": "UN World Urbanization Prospects + national census",
+  "data_url": "https://population.un.org/wup/",
+  "status": "passed",
+  "design": {
+    "description": "Test Zipf's law on city population distributions across 8 countries",
+    "n_countries": 8,
+    "n_cities": 130
+  },
+  "result": {
+    "country_fits": [
+      {
+        "country": "USA",
+        "alpha": 0.6081952367574669,
+        "C": 19842.263098841882,
+        "r2": 0.9738560587849578,
+        "n_cities": 20,
+        "largest": 20140.0,
+        "smallest": 2804.0,
+        "ratio_1_2": 1.525641996818423,
+        "rank_pop_product_mean": 47579.95,
+        "rank_pop_product_cv": 0.2666586803738958
+      },
+      {
+        "country": "China",
+        "alpha": 0.525702168603384,
+        "C": 32392.15993114203,
+        "r2": 0.9699566151129134,
+        "n_cities": 20,
+        "largest": 28516.0,
+        "smallest": 6018.0,
+        "ratio_1_2": 1.3237396713397085,
+        "rank_pop_product_mean": 93852.4,
+        "rank_pop_product_cv": 0.28707577766701914
+      },
+      {
+        "country": "Brazil",
+        "alpha": 0.8469241158565842,
+        "C": 19706.377059146682,
+        "r2": 0.9527792558543808,
+        "n_cities": 15,
+        "largest": 22043.0,
+        "smallest": 1853.0,
+        "ratio_1_2": 1.6379105364838757,
+        "rank_pop_product_mean": 26619.8,
+        "rank_pop_product_cv": 0.1702765509920562
+      },
+      {
+        "country": "India",
+        "alpha": 0.8766325594891204,
+        "C": 32608.6388773598,
+        "r2": 0.8911104348215273,
+        "n_cities": 15,
+        "largest": 20668.0,
+        "smallest": 2321.0,
+        "ratio_1_2": 1.2311908024066243,
+        "rank_pop_product_mean": 42209.0,
+        "rank_pop_product_cv": 0.2232905517592036
+      },
+      {
+        "country": "Japan",
+        "alpha": 1.4047468811378636,
+        "C": 37619.449918256934,
+        "r2": 0.9702481515707067,
+        "n_cities": 15,
+        "largest": 37393.0,
+        "smallest": 1050.0,
+        "ratio_1_2": 1.9393703646076448,
+        "rank_pop_product_mean": 19074.2,
+        "rank_pop_product_cv": 0.4388927766074025
+      },
+      {
+        "country": "Germany",
+        "alpha": 0.7210285642961112,
+        "C": 3019.915737594604,
+        "r2": 0.938894823816869,
+        "n_cities": 15,
+        "largest": 3645.0,
+        "smallest": 498.0,
+        "ratio_1_2": 1.919431279620853,
+        "rank_pop_product_mean": 5239.533333333334,
+        "rank_pop_product_cv": 0.2555223993641302
+      },
+      {
+        "country": "Mexico",
+        "alpha": 1.0837402681261274,
+        "C": 15538.056673497915,
+        "r2": 0.9710930458608416,
+        "n_cities": 15,
+        "largest": 21782.0,
+        "smallest": 878.0,
+        "ratio_1_2": 4.14106463878327,
+        "rank_pop_product_mean": 13474.533333333333,
+        "rank_pop_product_cv": 0.18165548671842394
+      },
+      {
+        "country": "France",
+        "alpha": 1.0713828319765264,
+        "C": 5916.992651409028,
+        "r2": 0.9205909989460306,
+        "n_cities": 15,
+        "largest": 11020.0,
+        "smallest": 395.0,
+        "ratio_1_2": 6.4107038976148925,
+        "rank_pop_product_mean": 5361.133333333333,
+        "rank_pop_product_cv": 0.30634274369836223
+      }
+    ],
+    "mean_alpha": 0.8922940782803981,
+    "std_alpha": 0.26880980111413194,
+    "mean_r2": 0.9485661730960284,
+    "global_fit": {
+      "country": "GLOBAL",
+      "alpha": 1.0967418984866495,
+      "C": 226015.3341369349,
+      "r2": 0.8098346757966686,
+      "n_cities": 130,
+      "largest": 37393.0,
+      "smallest": 395.0,
+      "ratio_1_2": 1.311298919904615,
+      "rank_pop_product_mean": 172861.87692307692,
+      "rank_pop_product_cv": 0.40100770615142733
+    },
+    "verdict": "REDISCOVERED",
+    "key_finding": "Zipf alpha = 0.892 +/- 0.269 across 8 countries"
+  }
+}
