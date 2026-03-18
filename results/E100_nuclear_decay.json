@@ -1,0 +1,30 @@
+{
+  "id": "E100",
+  "timestamp": "2026-03-18T01:25:25.754370+00:00",
+  "world": "nuclear",
+  "data_source": "NNDC/IAEA Nuclear Data (curated)",
+  "data_url": "https://www.nndc.bnl.gov/",
+  "status": "passed",
+  "design": {
+    "description": "Analyze nuclear properties across the table of nuclides. Binding energy curve, valley of stability, Geiger-Nuttall law, magic numbers.",
+    "n_nuclides": 72,
+    "n_stable": 45,
+    "n_radioactive": 27
+  },
+  "result": {
+    "binding_energy_peak": {
+      "nuclide": "Ni-62",
+      "A": 62,
+      "BE_A": 8.795
+    },
+    "valley_of_stability": {
+      "r2": 0.9966229278992882
+    },
+    "geiger_nuttall": {
+      "r2": 0.0011953170073506492,
+      "verdict": "PARTIAL"
+    },
+    "u238_chain_decades": 20.933581549220317,
+    "half_life_mass_correlation": -0.10905554211291021
+  }
+}
